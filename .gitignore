@@ -7,3 +7,4 @@ db.sqlite3
 node/node_modules/
 node_modules/
 .env
+local_settings.py
