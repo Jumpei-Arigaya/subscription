@@ -31,6 +31,18 @@ services:
       db:
         condition: service_healthy
 
+  front:
+    build:
+      context: .
+      dockerfile: Dockerfile_react
+    restart: always
+    volumes:
+      - ./node:/usr/src/app:cached
+    command: sh -c "cd subscription_front && npm start"
+    ports:
+      - "3000:3000"
+
 volumes:
   data-volume:
+
 
